@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Playfair Display", serif;
+  background:
+    radial-gradient(circle at top left, #e8f6ff, transparent 30%),
+    radial-gradient(circle at bottom right, #fff1f7, transparent 35%),
+    #ffffff;
+  color: #4e4e68;
+}
+
+.app {
+  width: min(1100px, 92vw);
+  margin: auto;
+  padding: 40px 0;
+  display: grid;
+  gap: 28px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #d7ecff;
+  border-radius: 28px;
+  padding: 34px;
+  box-shadow: 0 20px 60px rgba(122, 167, 210, 0.18);
+}
+
+.logo-area {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.logo-area h1 {
+  margin: 12px 0 8px;
+  font-size: clamp(28px, 5vw, 46px);
+  color: #8b7bb8;
+}
+
+.logo-area p {
+  margin: 0;
+  color: #8d8da3;
+}
+
+.rainbow {
+  width: 180px;
+  height: 90px;
+  margin: auto;
+  border-radius: 180px 180px 0 0;
+  background: linear-gradient(
+    to bottom,
+    #ffb7d5 0 20%,
+    #ffe18a 20% 40%,
+    #b9efd5 40% 60%,
+    #aee4ff 60% 80%,
+    #d8c5ff 80% 100%
+  );
+  opacity: 0.9;
+}
+
+form {
+  display: grid;
+  gap: 18px;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  font-size: 16px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 15px 16px;
+  border-radius: 16px;
+  border: 1px solid #cbdff5;
+  font-size: 16px;
+  background: #ffffff;
+  color: #4e4e68;
+  font-family: inherit;
+}
+
+button {
+  border: 0;
+  border-radius: 18px;
+  padding: 15px 22px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  background: #8bc7f5;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(139, 199, 245, 0.35);
+  font-family: inherit;
+}
+
+button:hover {
+  opacity: 0.92;
+}
+
+.loader {
+  margin-top: 24px;
+}
+
+.loader-text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  color: #7b7b94;
+}
+
+.progress-track {
+  width: 100%;
+  height: 14px;
+  border-radius: 999px;
+  background: #edf6ff;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #8bc7f5, #d8c5ff, #ffb7d5);
+  transition: width 0.2s ease;
+}
+
+.result {
+  display: grid;
+  gap: 20px;
+  justify-items: center;
+}
+
+canvas {
+  width: min(420px, 92vw);
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 18px 50px rgba(122, 167, 210, 0.2);
+  background: white;
+}
+
+.actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.note {
+  text-align: center;
+  color: #8d8da3;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 22px 0;
+  }
+
+  .card {
+    padding: 24px;
+    border-radius: 22px;
+  }
+
+  .rainbow {
+    width: 140px;
+    height: 70px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
